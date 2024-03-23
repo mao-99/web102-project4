@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
+import Card from './components/card'
+import SideNav from './components/sideNavs'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+
+function App() {
+  
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='body'>
+        <div className="sideNav">
+          <SideNav title="History"></SideNav>
+        </div>
+        <div className="mainContent">
+          <h1>Catrivia!!</h1>
+          <h3><em>...Indulge yourself by delving into this cat awesomeness...</em></h3>
+          <Card breedName={""} imageLink={""} weight={""} origin={""} lifeSpan={""}/>
+          <button>&#8634;</button>
+        </div>
+        <div className="sideNav">
+          <SideNav title="Ban List"></SideNav>
+        </div>        
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

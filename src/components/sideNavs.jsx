@@ -1,4 +1,4 @@
-export default function SideNav({title, allQueries}){
+export default function SideNav({title}){
     return (
         <>
         <div style={{display:'flex', flexDirection:'column', width:'20vw'}}>
